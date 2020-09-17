@@ -5,7 +5,7 @@ module.exports.run = async (bot, message, args) => {
   if (!message.member.hasPermission("ADMINISTRATOR")) {
     const embed = new Discord.RichEmbed()
       .setDescription("Yetersiz Yetki Gereken Yönetici Yetkisi")
-      .setColor("BLUE")
+      .setColor("BLUE")//made by dcs license of mit codeshare.xyz/info
       .setTimestamp()
       .setTitle("UYARI")
       .setFooter(bot.user.username, bot.user.avatarURL)
@@ -42,7 +42,7 @@ module.exports.run = async (bot, message, args) => {
   }
   if (i) {
     kişi = i;
-  }
+  }//made by dcs license of mit codeshare.xyz/info
 
   let m = args.slice(1).join(" ");
   if (!l && !i) {
