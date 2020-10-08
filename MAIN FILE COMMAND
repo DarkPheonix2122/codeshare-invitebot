@@ -1,0 +1,428 @@
+client.on("guildMemberRemove", async member => {
+  let kanal = await db.fetch(`davetkanal2_${member.guild.id}`);
+  let js1 = await db.fetch(`js1_${member.guild.id}`);
+  let js2 = await db.fetch(`js2_${member.guild.id}`);
+  let js3 = await db.fetch(`js3_${member.guild.id}`);
+  let js4 = await db.fetch(`js4_${member.guild.id}`);
+  let js5 = await db.fetch(`js5_${member.guild.id}`);
+  let js6 = await db.fetch(`js6_${member.guild.id}`);
+  let js7 = await db.fetch(`js7_${member.guild.id}`);
+  let js8 = await db.fetch(`js8_${member.guild.id}`);
+  let js9 = await db.fetch(`js9_${member.guild.id}`);
+  let js10 = await db.fetch(`js10_${member.guild.id}`);
+//made by. code share and Umut Bayraktar / licence of mit 
+  let js11 = await db.fetch(`js11_${member.guild.id}`);
+  let js22 = await db.fetch(`js22_${member.guild.id}`);
+  let js33 = await db.fetch(`js33_${member.guild.id}`);
+  let js44 = await db.fetch(`js44_${member.guild.id}`);
+  let js55 = await db.fetch(`js55_${member.guild.id}`);
+  let js66 = await db.fetch(`js66_${member.guild.id}`);
+  let js77 = await db.fetch(`js77_${member.guild.id}`);
+  let js88 = await db.fetch(`js88_${member.guild.id}`);
+  let js99 = await db.fetch(`js99_${member.guild.id}`);
+  let js100 = await db.fetch(`js100_${member.guild.id}`);
+  let d = db.fetch(`bunudavet_${member.id}_${member.guild.id}`);
+  const sa = client.users.get(d);
+  const sasad = member.guild.members.get(d);
+//made by. code share and Umut Bayraktar / licence of mit 
+  let ddd = await db.fetch("fakecik_" + member.id + "_" + member.guild.id);
+  if (ddd) {//made by. code share and Umut Bayraktar / licence of mit 
+    await db.add("fake_" + ddd + "_" + member.guild.id, -1);
+    await db.delete("fakecik_" + member.id + "_" + member.guild.id);
+  }
+  if (!ddd) {
+    await db.add(`davet_${d}_${member.guild.id}`, -1);
+  }
+  await db.add(`ayrilan_${d}_${member.guild.id}`, 1);
+//made by. code share and Umut Bayraktar / licence of mit 
+  if (!d) {
+    if (kanal) {
+      member.guild.channels
+        .get(kanal)
+        .send(
+          `**\`${member.user.tag}\` Sunucudan Ayrıldı Davet Eden \`Bulunamadı!\`**`
+        );
+    }
+  }//made by. code share and Umut Bayraktar / licence of mit 
+  let davet = await db.get(`davet_${d}_${member.guild.id}`);
+  if (d) {
+    if (kanal) {
+      member.guild.channels
+        .get(kanal)
+        .send(
+          `**\`${member.user.tag}\` Sunucudan Ayrıldı Davet Eden \`${sa.tag}\` Geriye Kalan Davet \`${davet}\`**`
+        );//made by. code share and Umut Bayraktar / licence of mit 
+    }
+    let kişi = member.guild.members.get(d);
+    if (js11) {
+      if (davet >= js11) {
+        if (!kişi.roles.has(js1)) {
+          kişi.addRole(js1);
+        }//made by. code share and Umut Bayraktar / licence of mit 
+      }
+    }
+
+    if (js22) {
+      if (davet >= js22) {
+        if (!kişi.roles.has(js2)) {
+          kişi.addRole(js2);
+        }
+      }
+    }//made by. code share and Umut Bayraktar / licence of mit 
+    if (js33) {
+      if (davet >= js33) {
+        if (!kişi.roles.has(js3)) {
+          kişi.addRole(js3);
+        }
+      }//made by. code share and Umut Bayraktar / licence of mit 
+    }
+    if (js44) {
+      if (davet >= js44) {
+        if (!kişi.roles.has(js4)) {
+          kişi.addRole(js4);
+        }//made by. code share and Umut Bayraktar / licence of mit 
+      }
+    }
+    if (js55) {
+      if (davet >= js55) {
+        if (!kişi.roles.has(js5)) {
+          kişi.addRole(js5);
+        }//made by. code share and Umut Bayraktar / licence of mit 
+      }
+    }
+    if (js66) {
+      if (davet >= js66) {
+        if (!kişi.roles.has(js6)) {
+          kişi.addRole(js6);
+        }
+      }
+    }//made by. code share and Umut Bayraktar / licence of mit 
+    if (js77) {
+      if (davet >= js77) {
+        if (!kişi.roles.has(js7)) {
+          kişi.addRole(js7);
+        }
+      }//made by. code share and Umut Bayraktar / licence of mit 
+    }
+    if (js88) {
+      if (davet >= js88) {
+        if (!kişi.roles.has(js8)) {
+          kişi.addRole(js8);
+        }
+      }//made by. code share and Umut Bayraktar / licence of mit 
+    }
+    if (js99) {
+      if (davet >= js99) {
+        if (!kişi.roles.has(js9)) {
+          kişi.addRole(js9);
+        }
+      }//made by. code share and Umut Bayraktar / licence of mit 
+    }
+    if (js100) {
+      if (davet >= js100) {
+        if (!kişi.roles.has(js10)) {
+          kişi.addRole(js10);
+        }
+      }//made by. code share and Umut Bayraktar / licence of mit 
+    }
+    if (js11) {
+      if (davet < js11) {
+        if (kişi.roles.has(js1)) {
+          kişi.removeRole(js1);
+        }
+      }//made by. code share and Umut Bayraktar / licence of mit 
+    }
+    if (js22) {
+      if (davet < js22) {
+        if (kişi.roles.has(js2)) {
+          kişi.removeRole(js2);
+        }
+      }//made by. code share and Umut Bayraktar / licence of mit 
+    }
+    if (js33) {
+      if (davet < js33) {
+        if (kişi.roles.has(js3)) {
+          kişi.removeRole(js3);
+        }
+      }//made by. code share and Umut Bayraktar / licence of mit 
+    }
+    if (js44) {
+      if (davet < js44) {
+        if (kişi.roles.has(js4)) {
+          kişi.removeRole(js4);
+        }
+      }//made by. code share and Umut Bayraktar / licence of mit 
+    }
+    if (js55) {
+      if (davet < js55) {
+        if (kişi.roles.has(js5)) {
+          kişi.removeRole(js5);
+        }
+      }//made by. code share and Umut Bayraktar / licence of mit 
+    }
+    if (js66) {
+      if (davet < js66) {
+        if (kişi.roles.has(js6)) {
+          kişi.removeRole(js6);
+        }
+      }//made by. code share and Umut Bayraktar / licence of mit 
+    }
+    if (js77) {
+      if (davet < js77) {
+        if (kişi.roles.has(js7)) {
+          kişi.removeRole(js7);
+        }
+      }//made by. code share and Umut Bayraktar / licence of mit 
+    }
+    if (js88) {
+      if (davet < js88) {
+        if (kişi.roles.has(js8)) {
+          kişi.removeRole(js8);
+        }//made by. code share and Umut Bayraktar / licence of mit 
+      }
+    }
+    if (js99) {
+      if (davet < js99) {
+        if (kişi.roles.has(js9)) {
+          kişi.removeRole(js9);
+        }
+      }//made by. code share and Umut Bayraktar / licence of mit 
+    }
+    if (js100) {
+      if (davet < js100) {
+        if (kişi.roles.has(js10)) {
+          kişi.removeRole(js10);
+        }
+      }
+    }
+  }
+});//made by. code share and Umut Bayraktar / licence of mit 
+
+client.on("guildMemberAdd", async member => {
+  member.guild.fetchInvites().then(async guildInvites => {
+    let js1 = await db.fetch(`js1_${member.guild.id}`);
+    let js2 = await db.fetch(`js2_${member.guild.id}`);
+    let js3 = await db.fetch(`js3_${member.guild.id}`);
+    let js4 = await db.fetch(`js4_${member.guild.id}`);
+    let js5 = await db.fetch(`js5_${member.guild.id}`);
+    let js6 = await db.fetch(`js6_${member.guild.id}`);
+    let js7 = await db.fetch(`js7_${member.guild.id}`);
+    let js8 = await db.fetch(`js8_${member.guild.id}`);
+    let js9 = await db.fetch(`js9_${member.guild.id}`);
+    let js10 = await db.fetch(`js10_${member.guild.id}`);
+//made by. code share and Umut Bayraktar / licence of mit 
+    let js11 = await db.fetch(`js11_${member.guild.id}`);
+    let js22 = await db.fetch(`js22_${member.guild.id}`);
+    let js33 = await db.fetch(`js33_${member.guild.id}`);
+    let js44 = await db.fetch(`js44_${member.guild.id}`);
+    let js55 = await db.fetch(`js55_${member.guild.id}`);
+    let js66 = await db.fetch(`js66_${member.guild.id}`);
+    let js77 = await db.fetch(`js77_${member.guild.id}`);
+    let js88 = await db.fetch(`js88_${member.guild.id}`);
+    let js99 = await db.fetch(`js99_${member.guild.id}`);
+    let js100 = await db.fetch(`js100_${member.guild.id}`);
+    let kanal = await db.fetch(`davetkanal1_${member.guild.id}`);
+//made by. code share and Umut Bayraktar / licence of mit 
+    let d = db.fetch(`bunudavet_${member.id}_${member.guild.id}`);
+
+    const ei = invites[member.guild.id];
+    if (d) {
+      await db.add("ayrilan_" + d + "_" + member.guild.id, -1);
+    }
+//made by. code share and Umut Bayraktar / licence of mit 
+    invites[member.guild.id] = guildInvites;
+    const i = client.users.get(member.id);
+
+    const invite = guildInvites.find(i => ei.get(i.code).uses < i.uses);
+
+    if (!invite === "https://discord.gg/"+member.guild.fetchVanityCode()) {
+      const sasad = member.guild.members.get(invite.inviter.id);
+      const davetçi = client.users.get(invite.inviter.id);
+      const kurulus = new Date().getTime() - i.createdAt.getTime();
+
+      if (kurulus < 1296000000) {
+        db.add(`fake_${invite.inviter.id}_${member.guild.id}`, +1);
+        db.set(
+          "fakecik_" + member.id + "_" + member.guild.id,
+          invite.inviter.id
+        );//made by. code share and Umut Bayraktar / licence of mit 
+      }
+      if (kurulus > 604800000) {
+        db.add(`davet_${invite.inviter.id}_${member.guild.id}`, +1);
+      }
+      if (!d) {
+        await db.set(
+          `bunudavet_${member.id}_${member.guild.id}`,
+          invite.inviter.id
+        );
+      }
+//made by. code share and Umut Bayraktar / licence of mit 
+      let sayı = await db.get(`davet_${invite.inviter.id}_${member.guild.id}`);
+
+      let davet;
+      if (!sayı) {
+        davet = 0;
+      } else {
+        davet = await db.get(`davet_${invite.inviter.id}_${member.guild.id}`);
+      }//made by. code share and Umut Bayraktar / licence of mit 
+
+      if (kanal) {
+        member.guild.channels
+          .get(kanal)
+          .send(
+            `**${member.user} Hoş Geldin! Davet Eden: \`${davetçi.tag}\` Toplam Davet \`${davet}\`  <a:tik:688055205509595188> ${invite}**`
+          );
+      }//made by. code share and Umut Bayraktar / licence of mit 
+      let kişi = member.guild.members.get(invite.inviter.id);
+      if (js11) {
+        if (davet >= js11) {
+          if (!kişi.roles.has(js1)) {
+            kişi.addRole(js1);
+          }
+        }//made by. code share and Umut Bayraktar / licence of mit 
+      }
+
+      if (js22) {
+        if (davet >= js22) {
+          if (!kişi.roles.has(js2)) {
+            kişi.addRole(js2);
+          }
+        }//made by. code share and Umut Bayraktar / licence of mit 
+      }
+      if (js33) {
+        if (davet >= js33) {
+          if (!kişi.roles.has(js3)) {
+            kişi.addRole(js3);
+          }
+        }//made by. code share and Umut Bayraktar / licence of mit 
+      }
+      if (js44) {
+        if (davet >= js44) {
+          if (!kişi.roles.has(js4)) {
+            kişi.addRole(js4);
+          }
+        }//made by. code share and Umut Bayraktar / licence of mit 
+      }
+      if (js55) {
+        if (davet >= js55) {
+          if (!kişi.roles.has(js5)) {
+            kişi.addRole(js5);
+          }//made by. code share and Umut Bayraktar / licence of mit 
+        }
+      }
+      if (js66) {
+        if (davet >= js66) {
+          if (!kişi.roles.has(js6)) {
+            kişi.addRole(js6);
+          }//made by. code share and Umut Bayraktar / licence of mit 
+        }
+      }
+      if (js77) {
+        if (davet >= js77) {
+          if (!kişi.roles.has(js7)) {
+            kişi.addRole(js7);
+          }//made by. code share and Umut Bayraktar / licence of mit 
+        }
+      }
+      if (js88) {
+        if (davet >= js88) {
+          if (!kişi.roles.has(js8)) {
+            kişi.addRole(js8);
+          }
+        }//made by. code share and Umut Bayraktar / licence of mit 
+      }
+      if (js99) {
+        if (davet >= js99) {
+          if (!kişi.roles.has(js9)) {
+            kişi.addRole(js9);
+          }
+        }//made by. code share and Umut Bayraktar / licence of mit 
+      }
+      if (js100) {
+        if (davet >= js100) {
+          if (!kişi.roles.has(js10)) {
+            kişi.addRole(js10);
+          }
+        }//made by. code share and Umut Bayraktar / licence of mit 
+      }
+      if (js11) {
+        if (davet < js11) {
+          if (kişi.roles.has(js1)) {
+            kişi.removeRole(js1);
+          }
+        }//made by. code share and Umut Bayraktar / licence of mit 
+      }
+      if (js22) {
+        if (davet < js22) {
+          if (kişi.roles.has(js2)) {
+            kişi.removeRole(js2);
+          }
+        }
+      }//made by. code share and Umut Bayraktar / licence of mit 
+      if (js33) {
+        if (davet < js33) {
+          if (kişi.roles.has(js3)) {
+            kişi.removeRole(js3);
+          }
+        }//made by. code share and Umut Bayraktar / licence of mit 
+      }
+      if (js44) {
+        if (davet < js44) {
+          if (kişi.roles.has(js4)) {
+            kişi.removeRole(js4);
+          }
+        }//made by. code share and Umut Bayraktar / licence of mit 
+      }
+      if (js55) {
+        if (davet < js55) {
+          if (kişi.roles.has(js5)) {
+            kişi.removeRole(js5);
+          }
+        }//made by. code share and Umut Bayraktar / licence of mit 
+      }
+      if (js66) {
+        if (davet < js66) {
+          if (kişi.roles.has(js6)) {
+            kişi.removeRole(js6);
+          }
+        }//made by. code share and Umut Bayraktar / licence of mit 
+      }
+      if (js77) {
+        if (davet < js77) {
+          if (kişi.roles.has(js7)) {
+            kişi.removeRole(js7);
+          }
+        }//made by. code share and Umut Bayraktar / licence of mit 
+      }
+      if (js88) {
+        if (davet < js88) {
+          if (kişi.roles.has(js8)) {
+            kişi.removeRole(js8);
+          }
+        }//made by. code share and Umut Bayraktar / licence of mit 
+      }
+      if (js99) {
+        if (davet < js99) {
+          if (kişi.roles.has(js9)) {
+            kişi.removeRole(js9);
+          }//made by. code share and Umut Bayraktar / licence of mit 
+        }
+      }
+      if (js100) {
+        if (davet < js100) {
+          if (kişi.roles.has(js10)) {
+            kişi.removeRole(js10);
+          }
+        }//made by. code share and Umut Bayraktar / licence of mit 
+      }
+    } else {
+      if (kanal) {
+        member.guild.channels
+          .get(kanal)
+          .send(
+            `**${member.user} Hoş Geldin! Davet Eden \`Bulunamadı!\`  <a:tik:688055205509595188>**`
+          );
+      }
+    }
+  }); //made by. code share and Umut Bayraktar / licence of mit 
+});
