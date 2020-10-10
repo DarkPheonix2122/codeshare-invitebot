@@ -235,7 +235,18 @@ client.on("guildMemberAdd", async member => {
 
     const invite = guildInvites.find(i => ei.get(i.code).uses < i.uses);
 
-    if (!invite === "https://discord.gg/"+member.guild.fetchVanityCode()) {
+    if (!invite){
+
+if (kanal) {
+        member.guild.channels
+          .get(kanal)
+          .send(
+            `**${member.user} Hoş Geldin! Davet Eden \`Bulunamadı!\`  <a:tik:688055205509595188>**`
+          );
+      }
+
+} else {
+
       const sasad = member.guild.members.get(invite.inviter.id);
       const davetçi = client.users.get(invite.inviter.id);
       const kurulus = new Date().getTime() - i.createdAt.getTime();
@@ -415,14 +426,8 @@ client.on("guildMemberAdd", async member => {
           }
         }//made by. code share and Umut Bayraktar / licence of mit 
       }
-    } else {
-      if (kanal) {
-        member.guild.channels
-          .get(kanal)
-          .send(
-            `**${member.user} Hoş Geldin! Davet Eden \`Bulunamadı!\`  <a:tik:688055205509595188>**`
-          );
-      }
-    }
+    } 
+      
+    
   }); //made by. code share and Umut Bayraktar / licence of mit 
 });
