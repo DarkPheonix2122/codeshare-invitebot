@@ -12,7 +12,7 @@ exports.run = async (client, message, args) => {
       .setFooter(client.user.username, client.user.avatarURL)
       .setThumbnail(client.user.avatarURL);
     message.channel.send(embed);
-  }
+  } else {
   let js1 = await db.fetch(`js1_${message.guild.id}`);
   let js2 = await db.fetch(`js2_${message.guild.id}`);
   let js3 = await db.fetch(`js3_${message.guild.id}`);
@@ -453,6 +453,7 @@ exports.run = async (client, message, args) => {
       }
     }
   }
+}
 };
 exports.conf = {
   enabled: true,
