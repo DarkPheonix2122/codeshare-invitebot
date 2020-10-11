@@ -1,3 +1,15 @@
+const invites = {};
+//made by dcs license of mit codeshare.xyz/info
+client.on("ready", () => {
+//made by dcs license of mit codeshare.xyz/info
+  client.guilds.forEach(g => {
+    g.fetchInvites().then(guildInvites => {
+      invites[g.id] = guildInvites;
+    });
+  });//made by dcs license of mit codeshare.xyz/info
+});
+//made by dcs license of mit codeshare.xyz/info
+
 client.on("guildMemberRemove", async member => {
   let kanal = await db.fetch(`davetkanal2_${member.guild.id}`);
   let js1 = await db.fetch(`js1_${member.guild.id}`);
